@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@google-cloud/storage": "^1.5.1",
+    "busboy": "^0.2.14",
     "child-process-promise": "^2.2.1",
+    "cors": "^2.8.4",
     "firebase-admin": "~5.4.2",
     "firebase-functions": "^0.7.1"
   },
