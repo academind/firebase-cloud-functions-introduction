@@ -92,3 +92,11 @@ exports.uploadFile = functions.https.onRequest((req, res) => {
     busboy.end(req.rawBody);
   });
 });
+
+exports.onDataAdded = functions.database.ref('/message/{id}').onCreate(event => {
+    const data = event.data.val();
+    const newData = {
+        msg: event.params.id + '-' + data.msg.toUpperCase()
+    };
+    return event.data.ref.child('copiedData').set(newData);
+});
