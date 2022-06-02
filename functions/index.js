@@ -11,7 +11,10 @@ const gcconfig = {
   keyFilename: "fb-cloud-functions-demo-firebase-adminsdk-km39q-405896eddb.json"
 };
 
-const gcs = require("@google-cloud/storage")(gcconfig);
+// const gcs = require("@google-cloud/storage")(gcconfig);
+const {Storage} = require('@google-cloud/storage');
+const gcs = new Storage(gcconfig);
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
